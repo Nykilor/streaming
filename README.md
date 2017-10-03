@@ -8,6 +8,7 @@
   
 ->getChannels(["key" => "value"])  
 ->getStreams(["key" => "value"])  
+->getTopGames(int $limit, int $offset)
 
 **new Streaming\Infrastructure\Websites\Smashcast( )**  
 ->getUser($userName)  
