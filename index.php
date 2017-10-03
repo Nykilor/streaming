@@ -10,7 +10,7 @@ $keys = require("app/config.php");
 // new Streaming\Infrastructure\Websites\Youtube($api_key)
 // ->getChannel() ->getVideo|getVideos()
 // -||-Twitch($api_key)
-// ->getChannels(["key" => "value"]) ->getStreams(["key" => "value"])
+// ->getChannels(["key" => "value"]) ->getStreams(["key" => "value"]) ->getTopGames(int $limit, int $offset)
 // -||-Smashcast()
 // ->getUser($userName)
 
@@ -43,3 +43,14 @@ $keys = require("app/config.php");
 // $sheet->prepareFrom($ent);
 // $sheet->autoSetColumns();
 // $sheet->createFile("test", "xlsx");
+
+// $repo = new Streaming\Infrastructure\Repository\Twitch\TopGamesRepository($entityManager);
+// $data = $repo->repo->findAll();
+// $parts = array_chunk($data,5);
+//
+// $s = new Streaming\Application\Service\ExportSpreadsheet\FSpreadsheet();
+// foreach ($parts as $key => $array) {
+//     $s->prepareFrom($array);
+// }
+// $s->autoSetColumns();
+// $s->createFile("zadanie", "xlsx");

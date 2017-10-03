@@ -35,7 +35,7 @@ class VideoRepository implements I\RepositoryInterface, I\ORMInterface {
                 $this->em->persist($value);
             }
         } else {
-            throw new Exception("Either 'object', or 'array of objects' of 'Streaming\Entity\YoutubeVideo' is allowed and must be given while class inti.", 1);
+            throw new Exception("Either 'object', or 'array of objects' of 'Streaming\Entity\YoutubeVideo' is allowed and must be given.", 1);
         }
 
         $this->em->flush();
