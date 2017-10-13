@@ -30,7 +30,7 @@ class Twitch {
 
     //https://dev.twitch.tv/docs/v3/reference/games
     //Possibly won't work at end of 2018
-    public function getTopGames($limit, $offset = 0) {
+    public function getTopGames(int $limit, int $offset = 0) {
         $url = "https://api.twitch.tv/kraken/games/top?limit=$limit";
 
         $content = $this->getContent($url);
